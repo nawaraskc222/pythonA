@@ -35,7 +35,7 @@ def getquestionanswer():
 getquestionanswer()
 
 def main():
-    file = open("new_file.txt","w")
+    file = open("output.txt","w")
     answer = []
     label_list = []
     question_answer = getquestionanswer()
@@ -49,7 +49,7 @@ def main():
         choices = answer[count]
         random.shuffle(choices)
         label = label_list[count]
-        for i in range(0,len(label)):
+        for i in range(0,len(choices)):
             choice = label[i] + " " + choices[i]
             file.write(choice)
             file.write("\n")

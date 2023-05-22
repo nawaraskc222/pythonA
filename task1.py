@@ -44,21 +44,21 @@ def main():
             print("D: Decrypting function")
             print("EX: Exit")
             user_choice = input("Choose an option: ").upper()
-            if user_choice == "E":
+            if user_choice == "E" or user_choice == "e":
                 encrypt_value = input("Enter the message: ").lower()
                 if encrypt_value == "":
                     print("The input message should be a non-empty string")
                 else:
                     output_ciphertext = Encrypting(encrypt_value)
                     print(''.join(output_ciphertext))
-            elif user_choice == "D":
+            elif user_choice == "D" or user_choice == "d":
                 decrypt_value = input("Enter the message: ").lower()
                 if decrypt_value == "":
                     print("The input message should be a non-empty string")
                 else:
                     output_plaintext = Decrypting(decrypt_value)
                     print(''.join(output_plaintext))
-            elif user_choice == "EX":
+            elif user_choice == "EX" or user_choice == "ex":
                 break
             else:
                 print("Invalid choice. Please try again.")
